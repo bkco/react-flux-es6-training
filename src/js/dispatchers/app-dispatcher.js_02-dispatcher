@@ -1,0 +1,15 @@
+import { Dispatcher } from 'flux';
+
+/*
+ * Keep this "app" dispatcher separate from the flux dispatcher, so that we can inject
+ * any code we need. Is a simple FACADE over flux dispatcher.
+ */
+const flux = new Dispatcher();
+
+export function register( callback ) {
+  return flux.register( callback );
+}
+
+export function dispatch( actionType, action ){
+  flux.dispatch( actionType, action );
+}

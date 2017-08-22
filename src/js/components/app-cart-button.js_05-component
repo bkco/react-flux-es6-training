@@ -1,0 +1,14 @@
+import React from 'react';
+
+/**
+ * First stateless component. Its taking in (props).
+ */
+export default (props) => {
+  return (
+        <button
+            className="btn btn-default btn-sm"
+            onClick={ props.handler }>
+            { props.txt }
+        </button>
+  )
+}
